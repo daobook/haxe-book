@@ -1,3 +1,8 @@
-# 快速上手
+# 教程
 
-告诉读者如何做某事的简短指南。假定读者拥有一些背景知识（通常，读者已经过阅读教程）。读者专注于“做事”而不是长篇大论的解释。How To 指南构成了大部分的文档，并且针对不同的主题分为不同的部分。
+参考：[Haxe Documentation Introduction](https://haxe.org/documentation/introduction/)
+
+````{describe} 导航
+```{tableofcontents}
+```
+````

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>某个主题</title>
+    <title>编译器的目标</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -70,7 +70,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/sanstyle-starter");
+    script.setAttribute("repo", "xinetzone/haxe-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -94,12 +94,12 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/sanstyle-starter/docs/topics/topic.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/haxe-book/docs/start/03_compiler-targets.html" />
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="解释" href="../principle/index.html" />
-    <link rel="prev" title="主题1" href="index.html" />
+    <link rel="next" title="类型" href="04_types.html" />
+    <link rel="prev" title="Haxe 标准库简介" href="02_stdlib-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -136,90 +136,100 @@ commentsRunWhenDOMLoaded(addUtterances);
   教程
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../README.html">
-   Sanstyle Strater
+   Haxe 教程
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../start/index.html">
-   快速上手
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   教程
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../start/build-ai.html">
-     从零开始搭建 AI 环境
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../basics/index.html">
-   指南
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../basics/topic.html">
-     基础
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  主题
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   主题1
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_intro.html">
+     Haxe 概述
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_language-features.html">
+     Haxe 语言特性
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_stdlib-intro.html">
+     Haxe 标准库简介
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     某个主题
+     编译器的目标
     </a>
    </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  原理
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../principle/index.html">
-   解释
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../principle/topic.html">
-     高级教程
+    <a class="reference internal" href="04_types.html">
+     类型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11_type-system.html">
+     类型系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class-field.html">
+     Class Fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-features.html">
+     compiler-features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-usage.html">
+     compiler-usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expression.html">
+     expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="haxelib.html">
+     haxelib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macro.html">
+     macro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python.html">
+     Python &amp; Haxe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="std.html">
+     Standard Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="target-details.html">
+     target-details
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="types-function.html">
+     types-function
     </a>
    </li>
   </ul>
@@ -235,8 +245,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -257,23 +267,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
    Sanstyle Book
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../other/index.html">
-   外部资源
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../other/topic.html">
-     话题
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -339,7 +332,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/topics/topic.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/start/03_compiler-targets.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -355,11 +348,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/sanstyle-starter"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/xinetzone/haxe-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/sanstyle-starter/issues/new?title=Issue%20on%20page%20%2Fdocs/topics/topic.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/haxe-book/issues/new?title=Issue%20on%20page%20%2Fdocs/start/03_compiler-targets.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -388,15 +381,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>某个主题<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="haxe-compiler-targets">
+<span id="id1"></span><h1>编译器的目标<a class="headerlink" href="#haxe-compiler-targets" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://haxe.org/documentation/introduction/compiler-targets.html">https://haxe.org/documentation/introduction/compiler-targets.html</a></p>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/sanstyle-starter",
+            repo: "xinetzone/haxe-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -405,7 +399,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/topics"
+            path: "./docs/start"
         },
         predefinedOutput: true
     }
@@ -422,19 +416,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="index.html" title="上一页 页">
+        <a class="left-prev" href="02_stdlib-intro.html" title="上一页 页">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">上一页</p>
-                <p class="prevnext-title">主题1</p>
+                <p class="prevnext-title">Haxe 标准库简介</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../principle/index.html" title="下一页 页">
+        <a class="right-next" href="04_types.html" title="下一页 页">
             <div class="prevnext-info">
                 <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">解释</p>
+                <p class="prevnext-title">类型</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

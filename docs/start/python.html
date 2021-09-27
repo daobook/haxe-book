@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>基础</title>
+    <title>Python &amp; Haxe</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -70,7 +70,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/sanstyle-starter");
+    script.setAttribute("repo", "xinetzone/haxe-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -94,12 +94,12 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/sanstyle-starter/docs/basics/topic.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/haxe-book/docs/start/python.html" />
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="主题1" href="../topics/index.html" />
-    <link rel="prev" title="指南" href="index.html" />
+    <link rel="next" title="Standard Library" href="std.html" />
+    <link rel="prev" title="macro" href="macro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -139,87 +139,97 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../README.html">
-   Sanstyle Strater
+   Haxe 教程
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../start/index.html">
-   快速上手
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   教程
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../start/build-ai.html">
-     从零开始搭建 AI 环境
+    <a class="reference internal" href="00_intro.html">
+     Haxe 概述
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   指南
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_language-features.html">
+     Haxe 语言特性
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_stdlib-intro.html">
+     Haxe 标准库简介
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_compiler-targets.html">
+     编译器的目标
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_types.html">
+     类型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11_type-system.html">
+     类型系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class-field.html">
+     Class Fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-features.html">
+     compiler-features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-usage.html">
+     compiler-usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expression.html">
+     expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="haxelib.html">
+     haxelib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macro.html">
+     macro
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     基础
+     Python &amp; Haxe
     </a>
    </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  主题
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../topics/index.html">
-   主题1
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../topics/topic.html">
-     某个主题
+    <a class="reference internal" href="std.html">
+     Standard Library
     </a>
    </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  原理
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../principle/index.html">
-   解释
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../principle/topic.html">
-     高级教程
+    <a class="reference internal" href="target-details.html">
+     target-details
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="types-function.html">
+     types-function
     </a>
    </li>
   </ul>
@@ -235,8 +245,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -257,23 +267,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
    Sanstyle Book
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../other/index.html">
-   外部资源
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../other/topic.html">
-     话题
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -339,7 +332,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/basics/topic.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/start/python.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -355,11 +348,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/sanstyle-starter"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/xinetzone/haxe-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/sanstyle-starter/issues/new?title=Issue%20on%20page%20%2Fdocs/basics/topic.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/haxe-book/issues/new?title=Issue%20on%20page%20%2Fdocs/start/python.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -380,6 +373,39 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   创建您的项目
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   安装 Python 运行时
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   开发项目
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   编译并运行项目
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   问社区
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -388,15 +414,80 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>基础<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="python-haxe">
+<h1>Python &amp; Haxe<a class="headerlink" href="#python-haxe" title="永久链接至标题">¶</a></h1>
+<p>参考：<a class="reference external" href="https://haxe.org/documentation/platforms/python.html">Getting started with Haxe for Python</a></p>
+<ul class="simple">
+<li><p>下载并安装 <a class="reference external" href="https://haxe.org/download">Haxe 编译器</a>。</p></li>
+<li><p>在 <a class="reference external" href="https://xinetzone.github.io/wiki/glossary/soft.html#term-Visual-Studio-Code" title="(在 Python)"><span class="xref std std-term">Visual Studio Code</span></a> 安装兼容 Haxe 的 IDE：<a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=vshaxe.haxe-extension-pack">Haxe Extension Pack</a></p></li>
+</ul>
+<section id="id1">
+<h2>创建您的项目<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>为你的 Haxe 项目创建一个新目录，结构如下：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>project/
+├── src/
+│   └── Main.hx
+│
+├── bin/
+│   └── python/
+│
+└── build.hxml
+</pre></div>
+</div>
+<p>将以下代码插入 <code class="docutils literal notranslate"><span class="pre">src/Main.hx</span></code> 文件：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+	<span class="kd">static</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+		<span class="n">Sys</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;Haxe is great!&quot;</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>将以下构建配置添加到 <code class="docutils literal notranslate"><span class="pre">build.hxml</span></code> 文件：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>-cp src
+-main Main
+-python bin/python/main.py
+</pre></div>
+</div>
+<p>上面的配置指定了你的源代码存储在<code class="docutils literal notranslate"><span class="pre">src/</span></code>，你的主 Haxe 文件是 <code class="docutils literal notranslate"><span class="pre">src/Main.hx</span></code>，你希望 Haxe 输出 Python 源代码到 <code class="docutils literal notranslate"><span class="pre">bin/python/</span></code>。</p>
+</section>
+<section id="python">
+<h2>安装 Python 运行时<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h2>
+<p>Haxe 需要 Python 3.x。由于安全修复和新特性，建议使用 Python 3.7 或更高版本。</p>
+</section>
+<section id="id2">
+<h2>开发项目<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="simple myst">
+<dt>Haxe API</dt><dd><p>浏览 <a class="reference external" href="https://api.haxe.org/">Haxe API 网站</a>，查找和使用核心的 Haxe API。除了核心的 Haxe API 之外，您还可以使用<a class="reference external" href="https://api.haxe.org/python/">特定于 Python 的 API</a>。</p>
+</dd>
+<dt>Haxe 库</dt><dd><p>浏览 <a class="reference external" href="https://lib.haxe.org/t/python/">haxelib</a> 网站，找到可以添加到项目中的社区开发的库。可以通过运行 <code class="docutils literal notranslate"><span class="pre">haxelib</span> <span class="pre">install</span> <span class="pre">&lt;library&gt;</span></code> 来全局安装 haxelib 库。也可以通过在 <code class="docutils literal notranslate"><span class="pre">.hxml</span></code> 文件中添加 <code class="docutils literal notranslate"><span class="pre">-lib</span> <span class="pre">&lt;library&gt;</span></code> 来指定你的项目使用 haxelib。</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>编译并运行项目<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="simple myst">
+<dt>编译</dt><dd><p>通过在项目目录的控制台运行 <code class="docutils literal notranslate"><span class="pre">haxe</span> <span class="pre">build.hxml</span></code> 来构建 Haxe 项目。这将把 <code class="docutils literal notranslate"><span class="pre">.hx</span></code> 源代码编译成 Python 脚本，然后你可以运行和调试这些脚本。</p>
+</dd>
+<dt>调试和运行</dt><dd><p>用 Haxe 编译项目后，需要在 <code class="docutils literal notranslate"><span class="pre">bin/python</span></code> 目录下打开一个控制台，运行命令 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">main.py</span></code>。也可以使用如下所示的成熟的 Python IDE 来运行和调试程序。</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sourceforge.net/projects/pyscripter/">PyScripter</a></p></li>
+<li><p><a class="reference external" href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2017 Community Edition</a></p></li>
+<li><p><a class="reference external" href="https://visualstudio.microsoft.com/downloads/">Visual Studio Code</a></p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>问社区<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>如果您需要任何帮助，可以访问活跃的 <a class="reference external" href="https://haxe.org/community/community-support.html">Haxe 社区</a>，并简单地请求帮助，了解您项目的细节。我们有一个帮助和活跃的社区，你应该很快得到你的答案!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/sanstyle-starter",
+            repo: "xinetzone/haxe-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -405,7 +496,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./docs/basics"
+            path: "./docs/start"
         },
         predefinedOutput: true
     }
@@ -422,19 +513,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="index.html" title="上一页 页">
+        <a class="left-prev" href="macro.html" title="上一页 页">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">上一页</p>
-                <p class="prevnext-title">指南</p>
+                <p class="prevnext-title">macro</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../topics/index.html" title="下一页 页">
+        <a class="right-next" href="std.html" title="下一页 页">
             <div class="prevnext-info">
                 <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">主题1</p>
+                <p class="prevnext-title">Standard Library</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

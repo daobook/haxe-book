@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>类型</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/haxe-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/haxe-book/docs/start/04_types.html" />
+    <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="类型系统" href="11_type-system.html" />
+    <link rel="prev" title="编译器的目标" href="03_compiler-targets.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  教程
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   Haxe 教程
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   教程
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_intro.html">
+     Haxe 概述
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_language-features.html">
+     Haxe 语言特性
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_stdlib-intro.html">
+     Haxe 标准库简介
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_compiler-targets.html">
+     编译器的目标
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     类型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11_type-system.html">
+     类型系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class-field.html">
+     Class Fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-features.html">
+     compiler-features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-usage.html">
+     compiler-usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expression.html">
+     expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="haxelib.html">
+     haxelib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macro.html">
+     macro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python.html">
+     Python &amp; Haxe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="std.html">
+     Standard Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="target-details.html">
+     target-details
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="types-function.html">
+     types-function
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  混沌
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../about/index.html">
+   关于
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../about/zreferences.html">
+     参考文献
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../CHANGELOG.html">
+     变更日志
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
+   Sanstyle Book
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/start/04_types.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/haxe-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/haxe-book/issues/new?title=Issue%20on%20page%20%2Fdocs/start/04_types.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#haxe-types-basic-types">
+   基本类型
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     数值类型
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     溢出
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bool">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Bool
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#void">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Void
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     为空性
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     可选参数和可空性
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#haxe-types-class-instance">
+   类实例
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     类构造器
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     继承
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     接口
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#haxe-types-enum-instance">
+   枚举实例
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enum">
+     Enum 构造函数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     使用枚举
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   匿名结构
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#json">
+     JSON 用于结构值
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     结构类型的类表示法
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     可选字段
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     对性能的影响
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#haxe-types-structure-extensions">
+     扩展
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#haxe-types-function">
+   函数类型
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#haxe-types-function-optional-arguments">
+     可选参数
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     默认值
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dynamic">
+   Dynamic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#haxe-types-abstract">
+   抽象类型
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monomorph">
+   Monomorph
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="haxe-types">
+<span id="id1"></span><h1>类型<a class="headerlink" href="#haxe-types" title="永久链接至标题">¶</a></h1>
+<p>Haxe 编译器使用了一个丰富的类型系统，它有助于在编译时检测程序中与类型相关的错误。类型错误是对给定类型的无效操作，例如除以 String、试图访问 Integer 的字段或调用参数太少（或太多）的函数。</p>
+<p>在某些语言中，这种额外的安全性是有代价的，因为程序员被迫显式地将类型分配给语法结构：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> myButton<span class="p">:</span><span class="n">MySpecialButton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MySpecialButton</span><span class="p">();</span> <span class="c1">// As3</span>
+</pre></div>
+</div>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">MySpecialButton</span><span class="o">*</span><span class="w"> </span><span class="n">myButton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MySpecialButton</span><span class="p">();</span><span class="w"> </span><span class="c1">// C++ </span>
+</pre></div>
+</div>
+<p>在 Haxe 中不需要显式类型注释，因为编译器可以推断出类型：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> myButton <span class="o">=</span> <span class="k">new</span> <span class="n">MySpecialButton</span><span class="p">();</span> <span class="c1">// Haxe</span>
+</pre></div>
+</div>
+<p>我们将在后面的<a class="reference internal" href="11_type-system.html#haxe-type-system-type-inference"><span class="std std-ref">类型推断</span></a>中详细探讨类型推断。现在，只要知道上面代码中的变量 <code class="docutils literal notranslate"><span class="pre">myButton</span></code> 是类 <code class="docutils literal notranslate"><span class="pre">MySpecialButton</span></code> 的一个实例就足够了。</p>
+<p>Haxe 类型系统有 7 种类型组：</p>
+<ul class="simple">
+<li><p>类实例：给定类或接口（interface）的对象</p></li>
+<li><p>枚举实例：Haxe 枚举的值</p></li>
+<li><p>结构：一个匿名结构，即命名字段的集合</p></li>
+<li><p>函数：由多个参数和一个返回值组成的复合类型</p></li>
+<li><p>动态：通配符类型，与任何其他类型兼容</p></li>
+<li><p>抽象：编译时类型在运行时由不同的类型表示</p></li>
+<li><p>Monomorph：一种未知的类型，后来可能变成另一种类型</p></li>
+</ul>
+<dl class="simple myst">
+<dt>复合类型</dt><dd><p>复合类型是具有子类型的类型。这包括任何带有 <a class="reference internal" href="11_type-system.html#haxe-type-system-type-parameters"><span class="std std-ref">Type Parameters</span></a> 的类型和<a class="reference internal" href="#haxe-types-function"><span class="std std-ref">函数类型</span></a>。</p>
+</dd>
+</dl>
+<section id="haxe-types-basic-types">
+<span id="id2"></span><h2>基本类型<a class="headerlink" href="#haxe-types-basic-types" title="永久链接至标题">¶</a></h2>
+<p>基本类型是 <code class="docutils literal notranslate"><span class="pre">Bool</span></code>, <code class="docutils literal notranslate"><span class="pre">Float</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Int</span></code>。在语法中可以很容易地通过诸如</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Bool</span></code> 值为 <code class="docutils literal notranslate"><span class="pre">true</span></code> 和 <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Int</span></code> 可以是 <code class="docutils literal notranslate"><span class="pre">1</span></code>、<code class="docutils literal notranslate"><span class="pre">0</span></code>、<code class="docutils literal notranslate"><span class="pre">-1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">0xFF0000</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Float</span></code> 可以是 <code class="docutils literal notranslate"><span class="pre">1.0</span></code>、<code class="docutils literal notranslate"><span class="pre">0.0</span></code>、<code class="docutils literal notranslate"><span class="pre">-1.0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">1e10</span></code></p></li>
+</ul>
+<p>在 Haxe 中基本类型并不是 <a class="reference internal" href="#haxe-types-class-instance"><span class="std std-ref">类实例</span></a>。相反，它们被实现为 <a class="reference internal" href="#haxe-types-abstract"><span class="std std-ref">抽象类型</span></a>，并绑定到编译器的内部操作符处理，如下面的部分所述。</p>
+<section id="id3">
+<h3>数值类型<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">Float</span></code></dt><dd><p>表示双精度 IEEE 64 位浮点数。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">Int</span></code></dt><dd><p>表示整数。</p>
+</dd>
+</dl>
+<p>虽然每个 <code class="docutils literal notranslate"><span class="pre">Int</span></code> 都可以用在需要 <code class="docutils literal notranslate"><span class="pre">Float</span></code> 的地方（也就是说，<code class="docutils literal notranslate"><span class="pre">Int</span></code> 可以赋值给 <code class="docutils literal notranslate"><span class="pre">Float</span></code> 或 <code class="docutils literal notranslate"><span class="pre">Float</span></code> 联合体），反之则不成立：将 <code class="docutils literal notranslate"><span class="pre">Float</span></code> 赋值给 <code class="docutils literal notranslate"><span class="pre">Int</span></code> 可能会导致精度损失，因此是不允许隐式赋值。</p>
+</section>
+<section id="id4">
+<h3>溢出<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>出于性能原因，Haxe 编译器不强制执行任何溢出行为。检查溢出的重担落在目标平台上。下面是一些平台特定的溢出行为注意事项：</p>
+<ul class="simple">
+<li><p>C++, Java, C#, Neko, Flash：32 位有符号整数通常可能溢出</p></li>
+<li><p>PHP, JS, Flash 8：没有原生 Int 类型，如果数字达到浮点数限制（<span class="math notranslate nohighlight">\(2^52\)</span>），将会丢失精度。</p></li>
+</ul>
+<p>另外,<code class="docutils literal notranslate"><span class="pre">haxe.Int32</span></code> 和 <code class="docutils literal notranslate"><span class="pre">haxe.Int64</span></code> 类可用于确保正确的溢出行为，但代价是在某些平台上进行额外的计算。</p>
+</section>
+<section id="bool">
+<h3><code class="docutils literal notranslate"><span class="pre">Bool</span></code><a class="headerlink" href="#bool" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">Bool</span></code></dt><dd><p>表示一个可以为 <code class="docutils literal notranslate"><span class="pre">true</span></code> 或 <code class="docutils literal notranslate"><span class="pre">false</span></code> 的值。</p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">Bool</span></code> 类型的值经常出现在 <a class="reference internal" href="expression.html#haxe-if"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">if</span></code></span></a> 和 <a class="reference internal" href="expression.html#haxe-while"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">while</span></code></span></a> 等条件中。</p>
+</section>
+<section id="void">
+<h3><code class="docutils literal notranslate"><span class="pre">Void</span></code><a class="headerlink" href="#void" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">Void</span></code></dt><dd><p>表示没有类型。它用来表示某物（通常是一个函数）没有值。</p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">Void</span></code> 是类型系统中的一种特殊情况，因为它实际上不是一种类型。它用于表示没有类型，这主要适用于函数参数和返回类型。比如下面的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数的类型是 <code class="docutils literal notranslate"><span class="pre">Void-&gt;Void</span></code>，意思是“它没有参数，也不返回任何内容”。：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">():</span><span class="n">Void</span> <span class="p">{</span>
+        <span class="n">trace</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Haxe 不允许 <code class="docutils literal notranslate"><span class="pre">Void</span></code> 类型的字段和变量，如果这样声明的话会报错：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="c1">// 不允许使用 Void 类型的参数和变量</span>
+<span class="kd">var</span> x<span class="p">:</span><span class="n">Void</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>为空性<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt>可为空的</dt><dd><p>在 Haxe 中，如果一个类型的有效值为 <code class="docutils literal notranslate"><span class="pre">null</span></code>，那么该类型就被认为是空的（<strong>nullable</strong>）。</p>
+</dd>
+</dl>
+<p>对于编程语言来说，对可空性有一个明确的定义是很常见的。然而，由于 Haxe 的目标语言的本质，它不得不在这方面找到一个妥协方案；虽然它们中的一些允许（事实上，默认为任何东西都为 <code class="docutils literal notranslate"><span class="pre">null</span></code>），但其他一些甚至不允许对某些类型为 <code class="docutils literal notranslate"><span class="pre">null</span></code>。这就需要区分两种目标语言：</p>
+<dl class="simple myst">
+<dt>静态目标</dt><dd><p>静态目标使用它们自己的类型系统，其中 <code class="docutils literal notranslate"><span class="pre">null</span></code> 不是基本类型的有效值。这对于 Flash、c++、Java 和 C# 目标来说是正确的。</p>
+</dd>
+<dt>动态目标</dt><dd><p>动态目标的类型比较宽松，基本类型允许 <code class="docutils literal notranslate"><span class="pre">null</span></code>。这适用于 JavaScript, PHP, Neko 和 Flash 6-8 目标。</p>
+</dd>
+</dl>
+<p>当在动态目标上使用 <code class="docutils literal notranslate"><span class="pre">null</span></code> 时，没有什么需要担心的；然而，静态的可能需要一些思考。对于初学者来说，基本类型被初始化为默认值。</p>
+<dl class="simple myst">
+<dt>默认值</dt><dd><p>基本类型在静态目标上有以下缺省值：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Int</span></code>：<code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Float</span></code>：Flash 是 <code class="docutils literal notranslate"><span class="pre">NaN</span></code>，其他静态目标是 <code class="docutils literal notranslate"><span class="pre">0.0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Bool</span></code>：<code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p>因此，Haxe 编译器 不允许将 <code class="docutils literal notranslate"><span class="pre">null</span></code> 赋值给静态目标的基本类型。为了实现这一点，基本类型必须包装为 <code class="docutils literal notranslate"><span class="pre">Null&lt;T&gt;</span></code>：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> a<span class="p">:</span><span class="n">Int</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// 静态平台的错误</span>
+<span class="kd">var</span> b<span class="p">:</span><span class="n">Null</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// 允许</span>
+</pre></div>
+</div>
+<p>类似地，基本类型不能与 <code class="docutils literal notranslate"><span class="pre">null</span></code> 比较，除非包装：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">:</span> <span class="nx">Int</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> <span class="c1">// 静态平台的错误</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">:</span> <span class="nx">Null</span><span class="o">&lt;</span><span class="nx">Int</span><span class="o">&gt;</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span> <span class="nx">b</span> <span class="o">!=</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> <span class="c1">// 允许</span>
+</pre></div>
+</div>
+<p>这种限制扩展到所有执行 <a class="reference internal" href="11_type-system.html#haxe-type-system-unification"><span class="std std-ref">Unification</span></a> 的情况。</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">Null&lt;T&gt;</span></code></dt><dd><p>在静态目标上，类型 <code class="docutils literal notranslate"><span class="pre">Null&lt;Int&gt;</span></code>， <code class="docutils literal notranslate"><span class="pre">Null&lt;Float&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Null&lt;Bool&gt;</span></code> 可以用来允许 <code class="docutils literal notranslate"><span class="pre">Null</span></code> 作为一个值。对于动态目标，这没有影响。<code class="docutils literal notranslate"><span class="pre">Null&lt;T&gt;</span></code> 也可以与其他类型一起使用，以证明 <code class="docutils literal notranslate"><span class="pre">null</span></code> 是一个允许的值。</p>
+</dd>
+</dl>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">null</span></code> 值在 <code class="docutils literal notranslate"><span class="pre">null&lt;T&gt;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> 中被“隐藏”，并分配给一个基本类型，则使用默认值：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> n <span class="p">:</span> <span class="n">Null</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="kd">var</span> a <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+<span class="n">trace</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="c1">// 静态平台 0</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>可选参数和可空性<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>当考虑为空时，必须考虑可选参数；非空的<strong>本机</strong>可选参数和需要定义的特定于 haxe 的可选参数之间的分隔。这种区别是通过问号可选参数来实现的：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="c1">// x 是一个原生 Int(非空)</span>
+<span class="kd">function</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{}</span>
+<span class="c1">// y 是 Null&lt;Int&gt; (nullable)</span>
+<span class="kd">function</span> <span class="nf">bar</span><span class="p">(</span> <span class="p">?</span><span class="n">y</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{}</span>
+<span class="c1">// z 也是 Null&lt;Int&gt;</span>
+<span class="kd">function</span> <span class="nf">opt</span><span class="p">(</span> <span class="p">?</span><span class="n">z</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>在其他一些编程语言中，参数（argument）和形参（parameter）是可以互换使用的。在 Haxe 中，参数引用方法时使用，参数引用 <a class="reference internal" href="11_type-system.html#haxe-type-system-type-parameters"><span class="std std-ref">Type Parameters</span></a> 时使用。</p>
+</div>
+</section>
+</section>
+<section id="haxe-types-class-instance">
+<span id="id7"></span><h2>类实例<a class="headerlink" href="#haxe-types-class-instance" title="永久链接至标题">¶</a></h2>
+<p>与许多面向对象的语言相似，类是 Haxe 中大多数程序的主要数据结构。每个 Haxe 类都有一个显式的名称、一个隐含的路径和零个或多个类字段。在这里，我们将把重点放在类的一般结构和它们的关系上，而把类字段的细节留给 <a class="reference internal" href="class-field.html#haxe-class-field"><span class="std std-ref">Class Fields</span></a>。</p>
+<p>下面的代码示例是本节其余部分的基础：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Point</span> <span class="p">{</span>
+	<span class="kd">var</span> x<span class="p">:</span><span class="n">Int</span><span class="p">;</span>
+	<span class="kd">var</span> y<span class="p">:</span><span class="n">Int</span><span class="p">;</span>
+
+	<span class="kd">public</span> <span class="kd">function</span> <span class="nf">new</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kd">function</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="s2">&quot;Point(&quot;</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>从语义上讲，此<strong>类</strong>表示离散的二维空间中的一个点——但在这里这并不重要。让我们来描述一下这个结构：</p>
+<ul class="simple">
+<li><p>关键字 <code class="docutils literal notranslate"><span class="pre">class</span></code> 表示我们正在声明一个类。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Point</span></code> 是类的名称，可以是符合<a class="reference external" href="https://haxe.org/manual/expression.html#define-identifier">类型标识符规则</a>的任何东西。</p></li>
+<li><p>用大括号 <code class="docutils literal notranslate"><span class="pre">{}</span></code> 括起来的是类字段，它由两个 <code class="docutils literal notranslate"><span class="pre">Int</span></code> 类型的变量字段 <code class="docutils literal notranslate"><span class="pre">x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">y</span></code> 组成，</p></li>
+<li><p>后面是一个名为 <code class="docutils literal notranslate"><span class="pre">new</span></code> 的特殊函数字段，这是类的构造函数，</p></li>
+<li><p>以及一个普通的函数 <code class="docutils literal notranslate"><span class="pre">toString</span></code>。</p></li>
+</ul>
+<p>在 Haxe 中有一种特殊的类型是兼容所有类的：</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">Class&lt;T&gt;</span></code></dt><dd><p>此类型与所有类类型兼容，这意味着所有类都可以分配给它。但是，不能将类实例分配给此类型。在编译时，<code class="docutils literal notranslate"><span class="pre">Class&lt;T&gt;</span></code> 是所有类类型的公共基类型。这种关系没有反映在生成的代码中。当 API 要求一个值是一个类，而不是一个特定的值时，这种类型很有用。这适用于 <a class="reference external" href="https://haxe.org/manual/std-reflection.html">Haxe 反射 API</a> 的几种方法。</p>
+</dd>
+</dl>
+<section id="id8">
+<h3>类构造器<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>类的实例是通过调用类构造函数来创建的——这个过程通常称为<strong>实例化</strong>。类实例的另一个名称是 <strong>object</strong>。然而，我们更喜欢用类实例这个术语来强调类/类实例和 <a class="reference internal" href="#haxe-types-enum-instance"><span class="std std-ref">enum/enum 实例</span></a> 之间的相似性。</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> p <span class="o">=</span> <span class="k">new</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">65</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>上面的代码将产生一个 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 类的实例，该实例被赋值给一个名为 <code class="docutils literal notranslate"><span class="pre">p</span></code> 的变量。<code class="docutils literal notranslate"><span class="pre">Point</span></code> 的构造函数接收 <code class="docutils literal notranslate"><span class="pre">-1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">65</span></code> 两个参数，并将它们分别赋值给实例变量 <code class="docutils literal notranslate"><span class="pre">x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">y</span></code>（比较它在类实例中的定义）。我们将在 <a class="reference internal" href="expression.html#haxe-expression-new"><span class="std std-ref">new</span></a> 一节稍后的内容中重新讨论这个新表达式的确切含义。现在，可以把它看作调用类构造函数并返回适当的对象。</p>
+</section>
+<section id="id9">
+<h3>继承<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>类可以从其他类继承；这由 <code class="docutils literal notranslate"><span class="pre">extends</span></code> 关键字表示：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Point3</span> <span class="kd">extends</span> <span class="n">Point</span> <span class="p">{</span>
+  <span class="kd">var</span> z<span class="p">:</span><span class="n">Int</span><span class="p">;</span>
+
+  <span class="kd">public</span> <span class="kd">function</span> <span class="nf">new</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">super</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>这种关系通常被描述为“is-a”：类 <code class="docutils literal notranslate"><span class="pre">Point3</span></code> 的任何实例也是 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 的实例。<code class="docutils literal notranslate"><span class="pre">Point</span></code> 被称为 <code class="docutils literal notranslate"><span class="pre">Point3</span></code> 的父类，而 <code class="docutils literal notranslate"><span class="pre">Point3</span></code> 是 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 的子类。一个类可以有许多子类，但只有一个父类。术语“类X的父类”通常指它的直接父类，其父类的父类，等等。</p>
+<p>上面的代码非常类似于最初的 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 类，其中显示了两个新的构造：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extends</span> <span class="pre">Point</span></code> 表示这个类继承自 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 类</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">super(x,</span> <span class="pre">y)</span></code> 是对父类构造函数的调用，在本例中是 <code class="docutils literal notranslate"><span class="pre">Point.new</span></code></p></li>
+</ul>
+<p>子类不需要定义自己的构造函数，但如果定义了，就必须调用 <code class="docutils literal notranslate"><span class="pre">super()</span></code>。与其他一些面向对象语言不同，这个调用可以出现在构造函数代码的任何地方，而不必是第一个表达式。</p>
+<p>一个类可以重写其父类的<a class="reference internal" href="class-field.html#haxe-class-field-method"><span class="std std-ref">方法</span></a>，这需要显式的 <code class="docutils literal notranslate"><span class="pre">override</span></code> 关键字。这种方法的影响和限制在<a class="reference internal" href="class-field.html#haxe-class-field-overriding"><span class="std std-ref">覆盖方法</span></a>中详细说明。</p>
+<p>类可以用关键字<code class="docutils literal notranslate"><span class="pre">final</span></code>来声明，以防止它们被扩展。</p>
+</section>
+<section id="id10">
+<h3>接口<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>接口可以被理解为类的签名，因为它描述了类的公共字段。接口不提供实现，而是提供纯粹的结构信息：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="n">Printable</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">function</span> <span class="nf">toString</span><span class="p">():</span><span class="n">String</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>语法类似于类，但有以下例外：</p>
+<ul class="simple">
+<li><p>使用<code class="docutils literal notranslate"><span class="pre">interface</span></code>关键字代替<code class="docutils literal notranslate"><span class="pre">class</span></code>关键字。</p></li>
+<li><p>函数没有任何<a class="reference internal" href="expression.html#haxe-expression"><span class="std std-ref">表达式</span></a>。</p></li>
+<li><p>每个字段必须有一个显式类型。</p></li>
+</ul>
+<p>与<a class="reference internal" href="11_type-system.html#haxe-type-system-structural-subtyping"><span class="std std-ref">结构子类型</span></a>不同，接口描述类之间的静态关系。一个给定的类只有在它显式声明如下的情况下才被认为与接口兼容：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Point</span> <span class="kd">implements</span> <span class="n">Printable</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>这里，<code class="docutils literal notranslate"><span class="pre">implements</span></code> 关键字表示 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 与 <code class="docutils literal notranslate"><span class="pre">Printable</span></code> 有“is-a”关系，即 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 的每个实例也是 <code class="docutils literal notranslate"><span class="pre">Printable</span></code> 的一个实例。虽然一个类可能只有一个父类，但它可以通过多个 <code class="docutils literal notranslate"><span class="pre">implements</span></code> 关键字实现多个接口：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Point</span> <span class="kd">implements</span> <span class="n">Printable</span>
+	<span class="kd">implements</span> <span class="n">Serializable</span>
+</pre></div>
+</div>
+<p>编译器检查 <code class="docutils literal notranslate"><span class="pre">implements</span></code> 假设是否成立。也就是说，它确保类确实实现了接口所需的所有字段。如果类或其任何父类提供了一个实现，则认为该字段已实现。</p>
+<p>接口字段不限于方法。它们也可以是变量和属性：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="n">Placeable</span> <span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">var</span> x<span class="p">:</span><span class="n">Float</span><span class="p">;</span>
+  <span class="kd">public</span> <span class="kd">var</span> y<span class="p">:</span><span class="n">Float</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="n">Main</span> <span class="kd">implements</span> <span class="n">Placeable</span> <span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">var</span> x<span class="p">:</span><span class="n">Float</span><span class="p">;</span>
+  <span class="kd">public</span> <span class="kd">var</span> y<span class="p">:</span><span class="n">Float</span><span class="p">;</span>
+
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>接口可以使用 <code class="docutils literal notranslate"><span class="pre">extends</span></code> 关键字扩展多个其他接口：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="n">Debuggable</span> <span class="kd">extends</span> <span class="n">Printable</span> <span class="kd">extends</span> <span class="n">Serializable</span>
+</pre></div>
+</div>
+<p>与类一样，接口可以用<code class="docutils literal notranslate"><span class="pre">final</span></code>关键字进行标记，以防止它们被扩展。</p>
+</section>
+</section>
+<section id="haxe-types-enum-instance">
+<span id="id11"></span><h2>枚举实例<a class="headerlink" href="#haxe-types-enum-instance" title="永久链接至标题">¶</a></h2>
+<p>Haxe 提供了强大的枚举类型（简称为 enum），实际上是一种<strong>代数数据类型</strong>（algebraic data type，简称 ADT）。虽然它们不能有任何表达式，但它们对于描述数据结构非常有用：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="n">Color</span> <span class="p">{</span>
+  <span class="n">Red</span><span class="p">;</span>
+  <span class="n">Green</span><span class="p">;</span>
+  <span class="n">Blue</span><span class="p">;</span>
+  <span class="n">Rgb</span><span class="p">(</span><span class="n">r</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="n">Int</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>从语义上讲，该枚举描述了一种颜色，它可以是红色、绿色、蓝色或指定的 RGB 值。其句法结构如下：</p>
+<ul class="simple">
+<li><p>关键字 <code class="docutils literal notranslate"><span class="pre">enum</span></code> 表示我们正在声明一个 enum。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Color</span></code>是枚举的名称，可以是任何符合类型标识符规则的东西。</p></li>
+<li><p>用大括号<code class="docutils literal notranslate"><span class="pre">{}</span></code>括起来的是<strong>枚举构造函数</strong>，它们是 Red、Green 和 Blue，没有参数，Rgb 有三个 Int 参数，分别是 r、g 和 b。</p></li>
+</ul>
+<p>Haxe 类型系统提供了一个与所有枚举类型统一的类型：</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">Enum&lt;T&gt;</span></code></dt><dd><p>此类型兼容所有枚举类型。在编译时，<code class="docutils literal notranslate"><span class="pre">Enum&lt;T&gt;</span></code>可以被视为所有枚举类型的通用基类型。然而，这种关系并没有反映在生成的代码中。</p>
+</dd>
+</dl>
+<section id="enum">
+<h3>Enum 构造函数<a class="headerlink" href="#enum" title="永久链接至标题">¶</a></h3>
+<p>与类及其构造函数类似，枚举可以使用它们的构造函数进行实例化。然而，与类不同的是，<code class="docutils literal notranslate"><span class="pre">enum</span></code> 提供了多个构造函数，可以通过它们的名称进行访问：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> a <span class="o">=</span> <span class="n">Red</span><span class="p">;</span>
+<span class="kd">var</span> b <span class="o">=</span> <span class="n">Green</span><span class="p">;</span>
+<span class="kd">var</span> c <span class="o">=</span> <span class="n">Rgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>在这段代码中，变量 <code class="docutils literal notranslate"><span class="pre">a</span></code>、<code class="docutils literal notranslate"><span class="pre">b</span></code> 和 <code class="docutils literal notranslate"><span class="pre">c</span></code> 的类型是 <code class="docutils literal notranslate"><span class="pre">Color</span></code>。变量 <code class="docutils literal notranslate"><span class="pre">c</span></code> 使用 <code class="docutils literal notranslate"><span class="pre">Rgb</span></code> 构造函数的参数进行初始化。</p>
+<p>所有枚举实例都可以分配给名为 <code class="docutils literal notranslate"><span class="pre">EnumValue</span></code> 的特殊类型。</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">EnumValue</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">EnumValue</span></code> 是一种特殊类型，与所有枚举实例统一。它被 <a class="reference external" href="https://haxe.org/manual/std.html">Haxe 标准库</a>用来为所有枚举实例提供特定的操作，当 API 需要枚举实例而不是特定的实例时，可以在用户代码中相应使用。</p>
+</dd>
+</dl>
+<p>区别 enum 类型和 enum 构造函数是很重要的，如下例所示：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="n">Color</span> <span class="p">{</span>
+  <span class="n">Red</span><span class="p">;</span>
+  <span class="n">Green</span><span class="p">;</span>
+  <span class="n">Blue</span><span class="p">;</span>
+  <span class="n">Rgb</span><span class="p">(</span><span class="n">r</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="n">Int</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> ec<span class="p">:</span><span class="n">EnumValue</span> <span class="o">=</span> <span class="n">Red</span><span class="p">;</span> <span class="c1">// valid</span>
+    <span class="kd">var</span> en<span class="p">:</span><span class="n">Enum</span><span class="p">&lt;</span><span class="n">Color</span><span class="p">&gt;</span> <span class="o">=</span> <span class="n">Color</span><span class="p">;</span> <span class="c1">// valid</span>
+    <span class="c1">// Error: Color should be Enum&lt;Color&gt;</span>
+    <span class="c1">// var x:Enum&lt;Color&gt; = Red;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>如果注释行未被注释，程序将无法编译，因为 <code class="docutils literal notranslate"><span class="pre">Red</span></code>（enum 构造函数）不能被赋值给 <code class="docutils literal notranslate"><span class="pre">Enum&lt;Color&gt;</span></code>（enum类型）的变量。这种关系类似于一个类及其实例。</p>
+</section>
+<section id="id12">
+<h3>使用枚举<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>如果只允许有限的值集，枚举是一个很好的选择。然后，各个构造函数表示允许的变量，并使编译器检查是否所有可能的值都被重视：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">enum</span> <span class="n">Color</span> <span class="p">{</span>
+  <span class="n">Red</span><span class="p">;</span>
+  <span class="n">Green</span><span class="p">;</span>
+  <span class="n">Blue</span><span class="p">;</span>
+  <span class="n">Rgb</span><span class="p">(</span><span class="n">r</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="n">Int</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> color <span class="o">=</span> <span class="n">getColor</span><span class="p">();</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="n">Red</span><span class="p">:</span>
+        <span class="n">trace</span><span class="p">(</span><span class="s2">&quot;Color was red&quot;</span><span class="p">);</span>
+      <span class="k">case</span> <span class="n">Green</span><span class="p">:</span>
+        <span class="n">trace</span><span class="p">(</span><span class="s2">&quot;Color was green&quot;</span><span class="p">);</span>
+      <span class="k">case</span> <span class="n">Blue</span><span class="p">:</span>
+        <span class="n">trace</span><span class="p">(</span><span class="s2">&quot;Color was blue&quot;</span><span class="p">);</span>
+      <span class="k">case</span> <span class="n">Rgb</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">trace</span><span class="p">(</span><span class="s2">&quot;Color had a red value of &quot;</span> <span class="o">+</span> <span class="n">r</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">static</span> <span class="kd">function</span> <span class="nf">getColor</span><span class="p">():</span><span class="n">Color</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">Rgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>通过将<code class="docutils literal notranslate"><span class="pre">getColor()</span></code>的返回值赋值给<code class="docutils literal notranslate"><span class="pre">color</span></code>，获取<code class="docutils literal notranslate"><span class="pre">color</span></code>的值之后，使用 <a class="reference internal" href="expression.html#haxe-expression-switch"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">switch</span></code>表达式</span></a> 根据该值使用分支。前三种情况，<code class="docutils literal notranslate"><span class="pre">Red</span></code>、<code class="docutils literal notranslate"><span class="pre">Green</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Blue</span></code>，都很简单，它们对应的是没有参数的 <code class="docutils literal notranslate"><span class="pre">Color</span></code> 构造函数。最后一种情况，<code class="docutils literal notranslate"><span class="pre">Rgb(r,</span> <span class="pre">g,</span> <span class="pre">b)</span></code>，显示了如何提取构造函数的参数值；它们作为 case body 表达式中的局部变量可用，就像使用了 <a class="reference internal" href="expression.html#haxe-expression-var"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">var</span></code> 表达式</span></a> 一样。</p>
+<p>关于使用 <code class="docutils literal notranslate"><span class="pre">switch</span></code> 表达式的高级信息将在 <a class="reference internal" href="01_language-features.html#haxe-lf-pattern-matching"><span class="std std-ref">模式匹配</span></a> 一节中讨论。</p>
+<p>(haxe:types/anonymous-structure)</p>
+</section>
+</section>
+<section id="id13">
+<h2>匿名结构<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>匿名结构可用于对数据进行分组，而无需显式地创建类型。下面的例子创建了一个具有两个字段 <code class="docutils literal notranslate"><span class="pre">x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">name</span></code> 的结构，并将它们的值分别初始化为 <code class="docutils literal notranslate"><span class="pre">12</span></code> 和<code class="docutils literal notranslate"><span class="pre">&quot;foo&quot;</span></code>：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> myStructure <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>一般的语法规则如下：</p>
+<ol class="simple">
+<li><p>结构包含在花括号<code class="docutils literal notranslate"><span class="pre">{}</span></code>中</p></li>
+<li><p>具有以逗号分隔的键-值对列表。</p></li>
+<li><p>冒号将键（必须是一个有效的<a class="reference external" href="https://haxe.org/manual/expression.html#define-identifier">标识符</a>）与值隔开。</p></li>
+<li><p>取值为任意的 Haxe 表达式。</p></li>
+</ol>
+<p>规则 4 暗示结构可以是嵌套的和复杂的，例如：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> user <span class="o">=</span> <span class="p">{</span>
+  <span class="n">name</span> <span class="p">:</span> <span class="s2">&quot;Nicolas&quot;</span><span class="p">,</span>
+    <span class="n">age</span> <span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+    <span class="n">pos</span> <span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="n">x</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="n">x</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span> <span class="p">}</span>
+  <span class="p">],</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>结构的字段，像类一样，可以使用点（<code class="docutils literal notranslate"><span class="pre">.</span></code>）来访问：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="c1">// get value of name, which is &quot;Nicolas&quot;</span>
+<span class="n">user</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+<span class="c1">// set value of age to 33</span>
+<span class="n">user</span><span class="p">.</span><span class="n">age</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>值得注意的是，使用匿名结构并不会破坏类型系统。编译器确保只访问可用的字段，这意味着以下程序不能编译：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Test</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> point <span class="o">=</span> <span class="p">{</span> <span class="n">x</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">12.0</span> <span class="p">};</span>
+    <span class="c1">// { y : Float, x : Float } has no field z</span>
+    <span class="n">point</span><span class="p">.</span><span class="n">z</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>错误消息表明编译器知道点的类型：它是一个具有字段 <code class="docutils literal notranslate"><span class="pre">x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">y</span></code> 类型为 <code class="docutils literal notranslate"><span class="pre">Float</span></code> 的结构。因为它没有<code class="docutils literal notranslate"><span class="pre">z</span></code>字段，所以访问失败。点的类型是通过类型推断知道的，这让我们不用为局部变量使用显式类型。如果<code class="docutils literal notranslate"><span class="pre">point</span></code>是一个字段，则需要显式类型：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Path</span> <span class="p">{</span>
+    <span class="kd">var</span> start <span class="p">:</span> <span class="p">{</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">};</span>
+    <span class="kd">var</span> target <span class="p">:</span> <span class="p">{</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">};</span>
+    <span class="kd">var</span> current <span class="p">:</span> <span class="p">{</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">};</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>为了避免这种冗余的类型声明，特别是对于更复杂的结构，建议使用 <code class="docutils literal notranslate"><span class="pre">typedef</span></code>：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">typedef</span> <span class="n">Point</span> <span class="o">=</span> <span class="p">{</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">}</span>
+
+<span class="kd">class</span> <span class="n">Path</span> <span class="p">{</span>
+    <span class="kd">var</span> start <span class="p">:</span> <span class="n">Point</span><span class="p">;</span>
+    <span class="kd">var</span> target <span class="p">:</span> <span class="n">Point</span><span class="p">;</span>
+    <span class="kd">var</span> current <span class="p">:</span> <span class="n">Point</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>你也可以使用 <a class="reference internal" href="#haxe-types-structure-extensions"><span class="std std-ref">扩展</span></a> 从其他结构中 “inherit” 字段：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">typedef</span> <span class="n">Point3</span> <span class="o">=</span> <span class="p">{</span> <span class="p">&gt;</span> <span class="n">Point</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">}</span>
+</pre></div>
+</div>
+<section id="json">
+<h3>JSON 用于结构值<a class="headerlink" href="#json" title="永久链接至标题">¶</a></h3>
+<p>也可以使用 JavaScript 对象表示法为结构使用字符串字面量为键：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> point <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;x&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span> <span class="p">:</span> <span class="o">-</span><span class="mi">5</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>虽然允许任何字符串字面值，但如果字段是有效的 Haxe 标识符，则该字段只被认为是类型的一部分。否则，Haxe 语法不允许对这样一个字段的表示访问，必须通过使用<code class="docutils literal notranslate"><span class="pre">Reflect.field</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Reflect.setField</span></code> 代替。</p>
+</section>
+<section id="id14">
+<h3>结构类型的类表示法<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<p>当定义结构类型时，Haxe 允许使用与 <a class="reference internal" href="class-field.html#haxe-class-field"><span class="std std-ref">Class Fields</span></a> 中描述的相同的语法。下面的 <code class="docutils literal notranslate"><span class="pre">typedef</span></code> 声明了一个 <code class="docutils literal notranslate"><span class="pre">Point</span></code> 类型，变量字段 <code class="docutils literal notranslate"><span class="pre">x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">y</span></code> 的类型是 <code class="docutils literal notranslate"><span class="pre">Int</span></code>：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">typedef</span> <span class="n">Point</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="kd">var</span> x <span class="p">:</span> <span class="n">Int</span><span class="p">;</span>
+    <span class="kd">var</span> y <span class="p">:</span> <span class="n">Int</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>结构的字段也可以用 <code class="docutils literal notranslate"><span class="pre">final</span></code> 声明，它只允许对它们赋值一次。只有当相应的字段也是 <code class="docutils literal notranslate"><span class="pre">final</span></code> 时，这样的结构才会与其他类型统一。</p>
+</section>
+<section id="id15">
+<h3>可选字段<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>结构类型的字段可以是可选的。在标准表示法中，这是通过在字段名前加上 <code class="docutils literal notranslate"><span class="pre">?</span></code> 来实现的：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">typedef</span> <span class="n">User</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">age</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span>
+  <span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+  <span class="p">?</span><span class="n">phoneNumber</span> <span class="p">:</span> <span class="n">String</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>在类符号中，<code class="docutils literal notranslate"><span class="pre">&#64;:optional</span></code> 元数据可以用来代替：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">typedef</span> <span class="n">User</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="kd">var</span> age <span class="p">:</span> <span class="n">Int</span><span class="p">;</span>
+  <span class="kd">var</span> name <span class="p">:</span> <span class="n">String</span><span class="p">;</span>
+  <span class="nd">@:optional</span> <span class="kd">var</span> phoneNumber <span class="p">:</span> <span class="n">String</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>结构字段可以在类表示法中声明为可选的，方法是在其名称前面加上问号<code class="docutils literal notranslate"><span class="pre">?</span></code>：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">typedef</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">age</span> <span class="o">:</span> <span class="nx">Int</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">name</span> <span class="o">:</span> <span class="nb">String</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="o">?</span><span class="nx">phoneNumber</span> <span class="o">:</span> <span class="nb">String</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h3>对性能的影响<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>当编译到<a class="reference external" href="https://haxe.org/manual/types-nullability.html#define-dynamic-target">动态目标</a>时，使用结构和<a class="reference internal" href="11_type-system.html#haxe-type-system-structural-subtyping"><span class="std std-ref">结构子类型</span></a>（通过扩展）对性能没有影响。然而，对<a class="reference external" href="https://haxe.org/manual/types-nullability.html#define-static-target">静态目标</a>的访问通常比较慢。虽然其中一些（JVM、HL）优化了常见情况，但最坏的情况需要动态查找，这可能比类字段访问慢几个数量级。</p>
+</section>
+<section id="haxe-types-structure-extensions">
+<span id="id17"></span><h3>扩展<a class="headerlink" href="#haxe-types-structure-extensions" title="永久链接至标题">¶</a></h3>
+<p>扩展用于表示一个结构具有给定类型的所有字段以及它自己的一些附加字段：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">typedef</span> <span class="n">IterableWithLength</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">&gt;</span> <span class="n">Iterable</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;,</span>
+  <span class="c1">// read only property</span>
+  <span class="kd">var</span> length<span class="p">(</span><span class="k">default</span><span class="p">,</span> <span class="k">null</span><span class="p">):</span><span class="n">Int</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> array <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+    <span class="kd">var</span> t<span class="p">:</span><span class="n">IterableWithLength</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="o">=</span> <span class="n">array</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>大于操作符<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>表示创建了一个<code class="docutils literal notranslate"><span class="pre">Iterable&lt;T&gt;</span></code>的扩展，后面是附加的类字段。在这种情况下，需要 <code class="docutils literal notranslate"><span class="pre">Int</span></code> 类型的只读 <a class="reference internal" href="class-field.html#haxe-class-field-property"><span class="std std-ref">属性</span></a> <code class="docutils literal notranslate"><span class="pre">length</span></code>。</p>
+<p>为了与 <code class="docutils literal notranslate"><span class="pre">IterableWithLength&lt;T&gt;</span></code> 兼容，类型必须与 <code class="docutils literal notranslate"><span class="pre">Iterable&lt;T&gt;</span></code> 兼容，并提供 <code class="docutils literal notranslate"><span class="pre">Int</span></code> 类型的只读<code class="docutils literal notranslate"><span class="pre">length</span></code>属性。前面的示例分配了一个<code class="docutils literal notranslate"><span class="pre">Array</span></code>，它正好满足这些要求。</p>
+<p>可以同时扩展多个结构（Haxe 3.1.0）：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">typedef</span> <span class="n">WithLength</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="kd">var</span> length<span class="p">(</span><span class="k">default</span><span class="p">,</span> <span class="k">null</span><span class="p">):</span><span class="n">Int</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">typedef</span> <span class="n">IterableWithLengthAndPush</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">&gt;</span> <span class="n">Iterable</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;,</span>
+  <span class="p">&gt;</span> <span class="n">WithLength</span><span class="p">,</span>
+  <span class="kd">function</span> <span class="nf">push</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">T</span><span class="p">):</span><span class="n">Int</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> array <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+    <span class="kd">var</span> t<span class="p">:</span><span class="n">IterableWithLengthAndPush</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="o">=</span> <span class="n">array</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>可以使用另一种扩展表示法，用<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>符号分隔每个扩展结构（Haxe 4.0.0）。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">typedef</span> <span class="nx">Point2D</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">x</span><span class="o">:</span><span class="nx">Int</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">y</span><span class="o">:</span><span class="nx">Int</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">typedef</span> <span class="nx">Point3D</span> <span class="o">=</span> <span class="nx">Point2D</span> <span class="o">&amp;</span> <span class="p">{</span><span class="nx">z</span><span class="o">:</span><span class="nx">Int</span><span class="p">};</span>
+
+<span class="kd">class</span> <span class="nx">Main</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="kr">public</span> <span class="kd">function</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">point</span><span class="o">:</span><span class="nx">Point3D</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span> <span class="mf">5</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span> <span class="nx">z</span><span class="o">:</span> <span class="mf">1</span><span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="haxe-types-function">
+<span id="id18"></span><h2>函数类型<a class="headerlink" href="#haxe-types-function" title="永久链接至标题">¶</a></h2>
+<p>函数类型，连同 <a class="reference internal" href="#haxe-types-monomorph"><span class="std std-ref">monomorph</span></a>，是一种通常对 Haxe 用户隐藏得很好的类型，但却无处不在。我们可以使用 <code class="docutils literal notranslate"><span class="pre">$type</span></code> 让它浮出表面，这是一个特殊的 Haxe 标识符，它会在编译过程中输出其表达式的类型：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// (i : Int, s : String) -&gt; Bool</span>
+    <span class="n">$type</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+    <span class="n">$type</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">));</span> <span class="c1">// Bool</span>
+  <span class="p">}</span>
+
+  <span class="kd">static</span> <span class="kd">function</span> <span class="nf">test</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span><span class="n">String</span><span class="p">):</span><span class="n">Bool</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>函数<code class="docutils literal notranslate"><span class="pre">test</span></code>的声明和第一个<code class="docutils literal notranslate"><span class="pre">$type</span></code>表达式的输出之间有很大的相似之处，只有一个细微的区别：函数返回类型出现在<code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>符号之后的末尾。</p>
+<p>在这两种表示法中，很明显函数<code class="docutils literal notranslate"><span class="pre">test</span></code>接受一个<code class="docutils literal notranslate"><span class="pre">Int</span></code>类型的参数和一个<code class="docutils literal notranslate"><span class="pre">String</span></code>类型的参数，并返回<code class="docutils literal notranslate"><span class="pre">Bool</span></code>类型的值。如果在第二个<code class="docutils literal notranslate"><span class="pre">$type</span></code>表达式中调用这个函数，例如 <code class="docutils literal notranslate"><span class="pre">test(1,</span> <span class="pre">&quot;foo&quot;)</span></code>， Haxe 类型将检查 <code class="docutils literal notranslate"><span class="pre">1</span></code> 是否可以被赋值给 <code class="docutils literal notranslate"><span class="pre">Int</span></code>，而<code class="docutils literal notranslate"><span class="pre">&quot;foo&quot;</span></code>是否可以被赋值给<code class="docutils literal notranslate"><span class="pre">String</span></code>。然后调用的类型等于<code class="docutils literal notranslate"><span class="pre">test</span></code>返回的值的类型，即<code class="docutils literal notranslate"><span class="pre">Bool</span></code>。</p>
+<p>注意，参数名在函数类型中是可选的。如果函数类型有其他函数类型作为参数或返回类型，可以使用圆括号正确地对它们进行分组。例如，<code class="docutils literal notranslate"><span class="pre">(Int,</span> <span class="pre">((Int)</span> <span class="pre">-&gt;</span> <span class="pre">Void))</span> <span class="pre">-&gt;</span> <span class="pre">Void</span></code> 表示一个函数，该函数有一个 <code class="docutils literal notranslate"><span class="pre">Int</span></code> 型参数和一个 <code class="docutils literal notranslate"><span class="pre">Int</span> <span class="pre">-&gt;</span> <span class="pre">Void</span></code> 型参数，返回类型为 <code class="docutils literal notranslate"><span class="pre">Void</span></code>。</p>
+<p>没有参数的函数类型使用<code class="docutils literal notranslate"><span class="pre">()</span></code>表示参数列表：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// () -&gt; Bool</span>
+    <span class="n">$type</span><span class="p">(</span><span class="n">test2</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kd">static</span> <span class="kd">function</span> <span class="nf">test2</span><span class="p">():</span><span class="n">Bool</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="haxe-types-function-optional-arguments">
+<span id="id19"></span><h3>可选参数<a class="headerlink" href="#haxe-types-function-optional-arguments" title="永久链接至标题">¶</a></h3>
+<p>可选参数通过在参数标识符前面加上<code class="docutils literal notranslate"><span class="pre">?</span></code>来声明：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// (?i : Int, ?s : String) -&gt; String</span>
+    <span class="n">$type</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">());</span> <span class="c1">// i: null, s: null</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span> <span class="c1">// i: 1, s: null</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">));</span> <span class="c1">// i: 1, s: foo</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">));</span> <span class="c1">// i: null, s: foo</span>
+  <span class="p">}</span>
+
+  <span class="kd">static</span> <span class="kd">function</span> <span class="nf">test</span><span class="p">(?</span><span class="n">i</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="p">?</span><span class="n">s</span><span class="p">:</span><span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;i: &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s2">&quot;, s: &quot;</span> <span class="o">+</span> <span class="n">s</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>函数<code class="docutils literal notranslate"><span class="pre">test</span></code>有两个可选参数：<code class="docutils literal notranslate"><span class="pre">Int</span></code>类型的<code class="docutils literal notranslate"><span class="pre">i</span></code>和<code class="docutils literal notranslate"><span class="pre">String</span></code>类型的<code class="docutils literal notranslate"><span class="pre">s</span></code>。这直接反映在第4行输出的函数类型中。这个示例程序调用<code class="docutils literal notranslate"><span class="pre">test</span></code>四次并打印它的返回值。</p>
+<ul class="simple">
+<li><p>第一个调用是不带任何参数的。</p></li>
+<li><p>第二次调用的单参数为<code class="docutils literal notranslate"><span class="pre">1</span></code>。</p></li>
+<li><p>第三次调用有两个参数<code class="docutils literal notranslate"><span class="pre">1</span></code>和<code class="docutils literal notranslate"><span class="pre">&quot;foo&quot;</span></code>。</p></li>
+<li><p>第四个调用使用单数参数<code class="docutils literal notranslate"><span class="pre">&quot;foo&quot;</span></code>。</p></li>
+</ul>
+<p>输出显示调用中省略的可选参数的值为<code class="docutils literal notranslate"><span class="pre">null</span></code>。这意味着这些参数的类型必须承认<code class="docutils literal notranslate"><span class="pre">null</span></code>作为值，这就提出了其可为空性的问题。当编译到静态目标时，Haxe 编译器通过推断其类型为 <code class="docutils literal notranslate"><span class="pre">Null&lt;T&gt;</span></code> 来确保可选的基本类型参数为空。</p>
+<p>虽然前三个回调是直观的，但第四个回调可能会让人感到惊讶；如果提供的值可分配给后面的参数，则可跳过可选参数。</p>
+</section>
+<section id="id20">
+<h3>默认值<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<p>Haxe 通过给参数赋一个常数值来允许参数的默认值：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// (?i : Int, ?s : String) -&gt; String</span>
+    <span class="n">$type</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">());</span> <span class="c1">// i: 12, s: bar</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span> <span class="c1">// i: 1, s: bar</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">));</span> <span class="c1">// i: 1, s: foo</span>
+    <span class="n">trace</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">));</span> <span class="c1">// i: 12, s: foo</span>
+  <span class="p">}</span>
+
+  <span class="kd">static</span> <span class="kd">function</span> <span class="nf">test</span><span class="p">(?</span><span class="n">i</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;i: &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s2">&quot;, s: &quot;</span> <span class="o">+</span> <span class="n">s</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>这个例子与 <a class="reference internal" href="#haxe-types-function-optional-arguments"><span class="std std-ref">可选参数</span></a> 中的例子非常相似，唯一的区别是值 <code class="docutils literal notranslate"><span class="pre">12</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&quot;bar&quot;</span></code> 分别被赋值给函数参数<code class="docutils literal notranslate"><span class="pre">i</span></code>和<code class="docutils literal notranslate"><span class="pre">s</span></code>。其效果是，如果从调用中省略参数，则使用默认值，而不是<code class="docutils literal notranslate"><span class="pre">null</span></code>。</p>
+<p>Haxe 中的默认值不是类型的一部分，除非函数是<a class="reference internal" href="class-field.html#haxe-class-field-inline"><span class="std std-ref">内联</span></a>的，否则不会在调用点被替换。在某些目标上，编译器可能仍然会为省略的参数值传递<code class="docutils literal notranslate"><span class="pre">null</span></code>，并在函数内部生成类似于此的代码：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span> <span class="kd">function</span> <span class="nf">test</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span>
+		<span class="n">i</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span>
+		<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span><span class="p">;</span>
+	<span class="k">return</span> <span class="s2">&quot;i: &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s2">&quot;, s: &quot;</span> <span class="o">+</span> <span class="n">s</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>在性能关键的代码中应该考虑这一点，因为没有默认值的解决方案有时可能更可行。</p>
+</section>
+</section>
+<section id="dynamic">
+<span id="haxe-types-dynamic"></span><h2>Dynamic<a class="headerlink" href="#dynamic" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://haxe.org/manual/types-dynamic.html">https://haxe.org/manual/types-dynamic.html</a></p>
+</section>
+<section id="haxe-types-abstract">
+<span id="id21"></span><h2>抽象类型<a class="headerlink" href="#haxe-types-abstract" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://haxe.org/manual/types-abstract.html">https://haxe.org/manual/types-abstract.html</a></p>
+</section>
+<section id="monomorph">
+<span id="haxe-types-monomorph"></span><h2>Monomorph<a class="headerlink" href="#monomorph" title="永久链接至标题">¶</a></h2>
+<p>Monomorph 是一种类型，通过<a class="reference external" href="https://haxe.org/manual/type-system-unification.html">unification</a>，可以演变成另一种类型。关于该类型的更多细节将在<a class="reference internal" href="11_type-system.html#haxe-type-system-type-inference"><span class="std std-ref">类型推断</span></a>一节中解释。</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/haxe-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/start"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="03_compiler-targets.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">编译器的目标</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="11_type-system.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">类型系统</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://sanstylelab.github.io/">SanstyleLab</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>target-details</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/haxe-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/haxe-book/docs/start/target-details.html" />
+    <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="types-function" href="types-function.html" />
+    <link rel="prev" title="Standard Library" href="std.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  教程
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   Haxe 教程
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   教程
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_intro.html">
+     Haxe 概述
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_language-features.html">
+     Haxe 语言特性
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_stdlib-intro.html">
+     Haxe 标准库简介
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_compiler-targets.html">
+     编译器的目标
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_types.html">
+     类型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11_type-system.html">
+     类型系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class-field.html">
+     Class Fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-features.html">
+     compiler-features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-usage.html">
+     compiler-usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expression.html">
+     expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="haxelib.html">
+     haxelib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macro.html">
+     macro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python.html">
+     Python &amp; Haxe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="std.html">
+     Standard Library
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     target-details
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="types-function.html">
+     types-function
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  混沌
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../about/index.html">
+   关于
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../about/zreferences.html">
+     参考文献
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../CHANGELOG.html">
+     变更日志
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
+   Sanstyle Book
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/start/target-details.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/haxe-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/haxe-book/issues/new?title=Issue%20on%20page%20%2Fdocs/start/target-details.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax">
+   访问目标特定的
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Syntax
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hashlink">
+   HashLink
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#haxe-hashlink">
+     Haxe/HashLink
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hashlink-c">
+     HashLink/C 编译
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       HashLink 字节码
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       HashLink/C 代码
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cppia">
+   Cppia
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#c">
+   C++
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#haxe-c">
+     快速上手 Haxe/C++
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       准备
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       系统编译器
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       交叉编译器
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hxcpp">
+     Hxcpp 构建环境
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       从命令行定义
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       从系统环境变量进行定义
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hxcpp-config-xml">
+       从
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .hxcpp_config.xml
+        </span>
+       </code>
+       定义
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#defining-via-buildxml-metadata">
+       Defining via
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         @:buildXml
+        </span>
+       </code>
+       Metadata
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-xml">
+     Build.xml
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     定义
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-hxcpp-cache">
+     The Hxcpp Cache
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#threads-and-stacks">
+     Threads And Stacks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#javascript">
+   JavaScript
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="target-details">
+<span id="haxe-target-details"></span><h1>target-details<a class="headerlink" href="#target-details" title="永久链接至标题">¶</a></h1>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-details.html">https://haxe.org/manual/target-details.html</a></p>
+<section id="syntax">
+<h2>访问目标特定的 <code class="docutils literal notranslate"><span class="pre">Syntax</span></code><a class="headerlink" href="#syntax" title="永久链接至标题">¶</a></h2>
+<p>在为特定目标编写代码时，可能需要访问仅在该目标上可用而在 Haxe 代码中不可访问的某些特性。仍然可以使用特定于目标的 <code class="docutils literal notranslate"><span class="pre">Syntax</span></code> api 来访问这些特性：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://api.haxe.org/js/Syntax.html"><code class="docutils literal notranslate"><span class="pre">js.Syntax</span></code></a> - JavaScript syntax</p></li>
+<li><p><a class="reference external" href="https://api.haxe.org/php/Syntax.html"><code class="docutils literal notranslate"><span class="pre">php.Syntax</span></code></a> - PHP syntax</p></li>
+<li><p><a class="reference external" href="https://api.haxe.org/python/Syntax.html"><code class="docutils literal notranslate"><span class="pre">python.Syntax</span></code></a> - Python syntax</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>在使用这些函数之前，请确保在 Haxe 标准库中没有可用的替代方法。Haxe 编译器无法验证生成的语法，这可能导致输出中出现无效或容易出错的代码。在检查标准库中是否有特定功能时，请参考 <a class="reference external" href="https://api.haxe.org/">API 文档</a>。目标特定的 api 被放在一个以目标命名的包中，例如 JavaScript 特定的 api 在顶级 <code class="docutils literal notranslate"><span class="pre">js</span></code> 包中。大多数目标包中都有一个 <code class="docutils literal notranslate"><span class="pre">Lib</span></code> 类，它为该目标提供了一些通用方法。</p>
+</div>
+<p><a class="reference external" href="https://haxe.org/manual/target-syntax.html#syntax.code(expr,-args...)"><code class="docutils literal notranslate"><span class="pre">Syntax.code(expr,</span> <span class="pre">args...)</span></code></a></p>
+<p>注入原始代码表达式。该表达式是一个字符串，可以包括 <code class="docutils literal notranslate"><span class="pre">{0}</span></code>，<code class="docutils literal notranslate"><span class="pre">{1}</span></code>，<code class="docutils literal notranslate"><span class="pre">{2}</span></code> 等。这些将被提供给函数的相应参数替换。如果代码需要引用 Haxe 字段，这一点很重要，因为生成的输出中的变量名可能与 Haxe 代码中的变量名不对应。如果提供了字符串，Haxe 编译器将负责添加引号。函数也可以返回值，尽管返回类型总是 <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>。</p>
+<p><code class="docutils literal notranslate"><span class="pre">js.Syntax.code</span></code> 的一个例子：</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> myMessage <span class="o">=</span> <span class="s2">&quot;Is Haxe great?&quot;</span><span class="p">;</span>
+<span class="kd">var</span> output<span class="p">:</span><span class="n">Bool</span> <span class="o">=</span> <span class="n">js</span><span class="p">.</span><span class="n">Syntax</span><span class="p">.</span><span class="n">code</span><span class="p">(</span><span class="s2">&quot;confirm({0})&quot;</span><span class="p">,</span> <span class="n">myMessage</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>生成的 JavaScript 输出如下：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">myMessage</span> <span class="o">=</span> <span class="s2">&quot;Is Haxe great?&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">confirm</span><span class="p">(</span><span class="nx">myMessage</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>其他函数在相应的 API 部分进行了说明。这些操作符通常包括在 Haxe 中不可用的本地操作符。</p>
+</section>
+<section id="hashlink">
+<h2>HashLink<a class="headerlink" href="#hashlink" title="永久链接至标题">¶</a></h2>
+<p>Haxe 支持编译到 HashLink 字节码或 HashLink/C 代码。<a class="reference external" href="https://hashlink.haxe.org/">HashLink</a> 是为 Haxe 设计的虚拟机。</p>
+<section id="haxe-hashlink">
+<h3>Haxe/HashLink<a class="headerlink" href="#haxe-hashlink" title="永久链接至标题">¶</a></h3>
+<p>要开始使用 Haxe/HashLink，创建一个新文件夹并将这个类保存为 <code class="docutils literal notranslate"><span class="pre">Main.hx</span></code>。</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">    Multi-line comments for documentation.</span>
+<span class="cm">**/</span>
+<span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">():</span><span class="n">Void</span> <span class="p">{</span>
+        <span class="c1">// Single line comment</span>
+        <span class="n">trace</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>要编译，可以从命令行运行以下命令：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>要编译，可以从命令行运行以下命令:
+</pre></div>
+</div>
+<p>另一种可能是创建并运行（双击）一个名为 <code class="docutils literal notranslate"><span class="pre">compile.hxml</span></code> 的文件。在这个例子中，hxml 文件应该和示例类在同一个目录中。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">hl</span> <span class="n">hello</span><span class="o">.</span><span class="n">hl</span>
+<span class="o">--</span><span class="n">main</span> <span class="n">Main</span>
+</pre></div>
+</div>
+<p>编译器输出一个名为 <code class="docutils literal notranslate"><span class="pre">hello.hl</span></code> 的文件，可以用 <code class="docutils literal notranslate"><span class="pre">hl</span> <span class="pre">hello.hl</span></code> 执行。</p>
+</section>
+<section id="hashlink-c">
+<h3>HashLink/C 编译<a class="headerlink" href="#hashlink-c" title="永久链接至标题">¶</a></h3>
+<p>Haxe 支持 HashLink 的两种编译模式：</p>
+<ul class="simple">
+<li><p>编译为 HashLink 字节码。这种模式的编译速度非常快，因此适合日常开发。</p></li>
+<li><p>编译为 HashLink/C 代码，用本机编译器编译为常规可执行文件。这种模式可以获得最佳的性能，因此它适合于最终版本。</p></li>
+</ul>
+<section id="id1">
+<h4>HashLink 字节码<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h4>
+<p>编译为 HashLink 字节码是通过在 <code class="docutils literal notranslate"><span class="pre">--hl</span></code> 参数中指定 <code class="docutils literal notranslate"><span class="pre">.hl</span></code> 输出来实现的：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>haxe --main Main --hl output.hl
+</pre></div>
+</div>
+<p>这将产生单个 <code class="docutils literal notranslate"><span class="pre">output.hl</span></code> 它可以在 HashLink JIT 虚拟机中执行：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>hl output.hl
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h4>HashLink/C 代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h4>
+<p>通过在 <code class="docutils literal notranslate"><span class="pre">--hl</span></code> 参数中指定 <code class="docutils literal notranslate"><span class="pre">.c</span></code> 输出，Haxe 代码也可以编译为 HashLink/C 代码：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>haxe --main Main --hl out/main.c
+</pre></div>
+</div>
+<p>这将在 <code class="docutils literal notranslate"><span class="pre">out</span></code> 目录中生成文件，可以使用 <code class="docutils literal notranslate"><span class="pre">gcc</span></code> 等 C 编译器将其编译为本地可执行文件。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gcc -O3 -o hello -std<span class="o">=</span>c++ -I out out/main.c -lhl <span class="o">[</span>-L/path/to/required/hdll<span class="o">]</span>
+</pre></div>
+</div>
+<p>注意，在本机编译期间，必须链接 HL 库。这个库在 HashLink 的二进制发行版中可用，也可以在编译 <a class="reference external" href="https://github.com/HaxeFoundation/hashlink">HashLink 的源代码</a> 时获得。</p>
+</section>
+</section>
+</section>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h2>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-python-getting-started.html">https://haxe.org/manual/target-python-getting-started.html</a></p>
+<p>要开始使用 Haxe/Python，创建一个新文件夹，并将这个类保存为 <code class="docutils literal notranslate"><span class="pre">Main.hx</span></code>。</p>
+<div class="highlight-haxe notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">    Multi-line comments for documentation.</span>
+<span class="cm">**/</span>
+<span class="kd">class</span> <span class="n">Main</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kd">function</span> <span class="nf">main</span><span class="p">():</span><span class="n">Void</span> <span class="p">{</span>
+        <span class="c1">// Single line comment</span>
+        <span class="n">trace</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>要编译，可以从命令行运行以下命令：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>haxe --python hello.py --main Main
+</pre></div>
+</div>
+<p>另一种可能是创建并运行（双击）一个名为 <code class="docutils literal notranslate"><span class="pre">compile.hxml</span></code> 的文件。在这个例子中，hxml 文件应该和示例类在同一个目录中。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">python</span> <span class="n">hello</span><span class="o">.</span><span class="n">py</span>
+<span class="o">--</span><span class="n">main</span> <span class="n">Main</span>
+</pre></div>
+</div>
+<p>编译器在当前文件夹中输出一个名为 <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> 的文件，可以通过命令行使用 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">hello.py</span></code> 执行。</p>
+</section>
+<section id="cppia">
+<h2>Cppia<a class="headerlink" href="#cppia" title="永久链接至标题">¶</a></h2>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-cppia.html">https://haxe.org/manual/target-cppia.html</a></p>
+<p>Cppia 是 Haxe 的一个可编写脚本的 cpp 子目标。cppia 脚本是一种指令汇编脚本，可以在 cppia 主机中运行，并在编译时间接近于零的情况下提供运行时速度。它还允许您向主机添加关键性能代码，从而为这些部件提供完整的 cpp 运行时速度。</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://api.haxe.org/cpp/cppia/index.html">Cppia API documentation</a></p></li>
+<li><p><a class="reference external" href="https://code.haxe.org/category/other/working-with-cppia/index.html">Cppia tutorial</a></p></li>
+</ul>
+</div>
+</section>
+<section id="c">
+<h2>C++<a class="headerlink" href="#c" title="永久链接至标题">¶</a></h2>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-cpp.html">https://haxe.org/manual/target-cpp.html</a></p>
+<section id="haxe-c">
+<h3>快速上手 Haxe/C++<a class="headerlink" href="#haxe-c" title="永久链接至标题">¶</a></h3>
+<p>C++ 目标使用各种 C++ 编译器（假定已经安装在系统上）来创建本地可执行文件或库。编译分两个阶段进行。首先，Haxe 编译器在输出目录中生成源文件、头文件和构建文件。其次，调用 <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> <a class="reference external" href="https://haxe.org/manual/haxelib.html">Haxelib 库</a> 来运行生成最终结果所需的系统编译器和连接器。</p>
+<section id="id3">
+<h4>准备<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
+<p>在使用 C++ 目标之前，您需要安装：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hxcpp</span></code>：使用 <code class="docutils literal notranslate"><span class="pre">haxelib</span> <span class="pre">install</span> <span class="pre">hxcpp</span></code> 安装</p></li>
+<li><p>一种 C++ 编译器，如 <code class="docutils literal notranslate"><span class="pre">g++</span></code>，<code class="docutils literal notranslate"><span class="pre">clang++</span></code>，或 <code class="docutils literal notranslate"><span class="pre">msvc++</span></code>。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h4>系统编译器<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<p>系统编译器支持三种主要操作系统——Mac、Linux 和 Windows。</p>
+<p>在 Mac 上，建议你从 Mac 应用商店安装最新的 Xcode。</p>
+<p>在 Linux 操作系统下，建议使用系统包管理器安装编译器。</p>
+<p>在 Windows 环境下，推荐使用 Microsoft Visual Studio。在 Windows 上，您也可以使用基于 <code class="docutils literal notranslate"><span class="pre">gcc</span></code> 的编译器。Haxelib 库中包含一个最小的发行版，可以使用它进行安装 <code class="docutils literal notranslate"><span class="pre">haxelib</span> <span class="pre">install</span> <span class="pre">minimingw</span></code>。</p>
+</section>
+<section id="id5">
+<h4>交叉编译器<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<p>如果你安装了一个合适的交叉编译器，<code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 可以用来编译非主机架构。编译器通常以软件开发工具包（SDK）的形式提供，或者在 iOS 设备中，附带系统编译器（Xcode）。选择使用哪个编译器是通过在 <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 构建环境中定义特定变量来实现的。请注意， <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 构建工具只负责生成本地可执行文件或本地库（静态或动态），而不是通常需要的资产和元数据的完整绑定和打包。</p>
+</section>
+</section>
+<section id="hxcpp">
+<h3>Hxcpp 构建环境<a class="headerlink" href="#hxcpp" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 构建环境可以通过在键值对中设置或定义变量来控制。定义一个没有特定值的键通常足以触发所需的行为，这些键通常被称为“定义”。</p>
+<p>有关标准定义的列表，请参阅 <a class="reference external" href="https://haxe.org/manual/target-cpp-defines.html">定义</a>。</p>
+<section id="id6">
+<h4>从命令行定义<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<p>更改 <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 构建环境的最简单方法是使用 <code class="docutils literal notranslate"><span class="pre">-D</span></code> 将定义通过 Haxe 命令行传递。键值对也可以通过这种方式传递，例如：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>haxe --main Main --cpp cpp -D android -D static_link -D <span class="nv">PLATFORM</span><span class="o">=</span>android-9
+</pre></div>
+</div>
+<p>这里：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">android</span></code>：导致 <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 交叉编译到 Android。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">static_link</span></code>：导致创建静态（而不是动态）库。</p></li>
+<li><p>android 目标平台（<code class="docutils literal notranslate"><span class="pre">PLATFORM</span></code>）被设置为一个特定的值（<code class="docutils literal notranslate"><span class="pre">android-9</span></code>）。这个平台信息被传递给SDK，以便它可以生成适当的代码。</p></li>
+</ul>
+<p>高级用户可以在编译时使用宏向系统添加额外的定义。这些定义也将传递给 <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 构建工具。</p>
+</section>
+<section id="id7">
+<h4>从系统环境变量进行定义<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> 构建工具将导入所有的系统环境变量，所以你可以使用系统配置流程，如：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">HXCPP_VERBOSE</span><span class="o">=</span>
+</pre></div>
+</div>
+<p>或者，在 Windows 上：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">HXCPP_VERBOSE</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>如果您通过 IDE 运行 Haxe，那么必须小心处理环境变量，因为这些变量可能是在 IDE 启动时从环境中读取的，而不是在系统上的变量发生变化时进行更改。</p>
+</section>
+<section id="hxcpp-config-xml">
+<h4>从 <code class="docutils literal notranslate"><span class="pre">.hxcpp_config.xml</span></code> 定义<a class="headerlink" href="#hxcpp-config-xml" title="永久链接至标题">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> build tool parses several “build files”. These files are in a basic XML file format and can be used to set, or conditionally set, configuration variables. As part of the build process, the <code class="docutils literal notranslate"><span class="pre">.hxcpp_config.xml</span></code> file, known as the configuration file, will be read (twice). This file is located in the user’s home directory (or user’s profile directory on Windows) and is the best place to configure variables that are specific to the system that rarely change, such as the location of cross-compiler SDKs. A placeholder file will be generated the first time <code class="docutils literal notranslate"><span class="pre">hxcpp</span></code> is run by a user on the machine. You can see the exact location of this file in the build log if you compile with the <code class="docutils literal notranslate"><span class="pre">HXCPP_VERBOSE</span></code> define.</p>
+<p>The configuration file is read twice. The first time the <code class="docutils literal notranslate"><span class="pre">vars</span></code> section is read early in the configuration process, and is used to set up and configure the location of compilers. The second time, the <code class="docutils literal notranslate"><span class="pre">exes</span></code> section is read near the end of the process and allows modification of the compiler or build process based on all the available information. See <a class="reference external" href="https://haxe.org/manual/target-cpp-file-format.html"><code class="docutils literal notranslate"><span class="pre">build.xml</span></code> file format</a> for details on the file format.</p>
+</section>
+<section id="defining-via-buildxml-metadata">
+<h4><a class="reference external" href="https://haxe.org/manual/target-cpp-build-environment.html#defining-via-&#64;buildxml-metadata">Defining via <code class="docutils literal notranslate"><span class="pre">&#64;:buildXml</span></code> Metadata</a><a class="headerlink" href="#defining-via-buildxml-metadata" title="永久链接至标题">¶</a></h4>
+<p>Configuration data can be injected into the <code class="docutils literal notranslate"><span class="pre">build.xml</span></code> file that is created by Haxe. This is done attaching metadata to a Haxe class that is directly or indirectly included in the build. For example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>@:buildXml(&quot;
+<span class="nt">&lt;target</span> <span class="na">id=</span><span class="s">&#39;haxe&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;lib</span> <span class="na">name=</span><span class="s">&#39;${haxelib:nme}/lib/${BINDIR}/libnme${LIBEXTRA}${LIBEXT}&#39;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/target&gt;</span>
+<span class="nt">&lt;include</span> <span class="na">name=</span><span class="s">&#39;${haxelib:nme}/lib/NmeLink.xml&#39;</span><span class="nt">/&gt;</span>
+&quot;)
+@:keep class StaticNme { ... }
+</pre></div>
+</div>
+<p>This metadata is best for adding libraries or include paths to the build. Some notes:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">&#64;:keep</span></code> metadata is added to prevent <a class="reference external" href="https://haxe.org/manual/cr-dce.html">dead code elimination</a> from removing this class.</p></li>
+<li><p>Quoting can be a bit tricky - here the double-quotes are used for Haxe, and the single quotes are added to the <code class="docutils literal notranslate"><span class="pre">build.xml</span></code>.</p></li>
+<li><p>Injecting a single “include” command is a good way to manage the quoting issue.</p></li>
+<li><p>Knowledge of the build system is required to get this right. See <a class="reference external" href="https://haxe.org/manual/target-cpp-file-format.html"><code class="docutils literal notranslate"><span class="pre">build.xml</span></code> file format</a> for details on the file format.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">build.xml</span></code> file is read after the choice of compiler has been made, so it is generally not suitable for configuring the compiler.</p></li>
+</ul>
+</section>
+</section>
+<section id="build-xml">
+<h3>Build.xml<a class="headerlink" href="#build-xml" title="永久链接至标题">¶</a></h3>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-cpp-file-format.html">https://haxe.org/manual/target-cpp-file-format.html</a></p>
+</section>
+<section id="id8">
+<h3>定义<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-cpp-defines.html">https://haxe.org/manual/target-cpp-defines.html</a></p>
+</section>
+<section id="the-hxcpp-cache">
+<h3>The Hxcpp Cache<a class="headerlink" href="#the-hxcpp-cache" title="永久链接至标题">¶</a></h3>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-cpp-CompileCache.html">https://haxe.org/manual/target-cpp-CompileCache.html</a></p>
+</section>
+<section id="threads-and-stacks">
+<h3>Threads And Stacks<a class="headerlink" href="#threads-and-stacks" title="永久链接至标题">¶</a></h3>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-cpp-ThreadsAndStacks.html">https://haxe.org/manual/target-cpp-ThreadsAndStacks.html</a></p>
+</section>
+</section>
+<section id="javascript">
+<h2>JavaScript<a class="headerlink" href="#javascript" title="永久链接至标题">¶</a></h2>
+<p>参考：<a class="reference external" href="https://haxe.org/manual/target-javascript.html">https://haxe.org/manual/target-javascript.html</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/haxe-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/start"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="std.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">Standard Library</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="types-function.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">types-function</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://sanstylelab.github.io/">SanstyleLab</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

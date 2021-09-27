@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/sanstyle-starter");
+    script.setAttribute("repo", "xinetzone/haxe-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -86,7 +86,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/sanstyle-starter/genindex.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/haxe-book/genindex.html" />
     <link rel="shortcut icon" href="_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="#" />
     <link rel="search" title="搜索" href="search.html" />
@@ -129,12 +129,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="README.html">
-   Sanstyle Strater
+   Haxe 教程
   </a>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="docs/start/index.html">
-   快速上手
+   教程
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -143,73 +143,83 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="docs/start/build-ai.html">
-     从零开始搭建 AI 环境
+    <a class="reference internal" href="docs/start/00_intro.html">
+     Haxe 概述
     </a>
    </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="docs/basics/index.html">
-   指南
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="docs/basics/topic.html">
-     基础
+    <a class="reference internal" href="docs/start/01_language-features.html">
+     Haxe 语言特性
     </a>
    </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  主题
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="docs/topics/index.html">
-   主题1
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="docs/topics/topic.html">
-     某个主题
+    <a class="reference internal" href="docs/start/02_stdlib-intro.html">
+     Haxe 标准库简介
     </a>
    </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  原理
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="docs/principle/index.html">
-   解释
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="docs/principle/topic.html">
-     高级教程
+    <a class="reference internal" href="docs/start/03_compiler-targets.html">
+     编译器的目标
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/04_types.html">
+     类型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/11_type-system.html">
+     类型系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/class-field.html">
+     Class Fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/compiler-features.html">
+     compiler-features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/compiler-usage.html">
+     compiler-usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/expression.html">
+     expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/haxelib.html">
+     haxelib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/macro.html">
+     macro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/python.html">
+     Python &amp; Haxe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/std.html">
+     Standard Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/target-details.html">
+     target-details
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="docs/start/types-function.html">
+     types-function
     </a>
    </li>
   </ul>
@@ -225,8 +235,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="docs/about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -247,23 +257,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
    Sanstyle Book
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="docs/other/index.html">
-   外部资源
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="docs/other/topic.html">
-     话题
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -328,11 +321,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/sanstyle-starter"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/xinetzone/haxe-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/sanstyle-starter/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/haxe-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         

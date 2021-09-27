@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>从零开始搭建 AI 环境</title>
+    <title>types-function</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -70,7 +70,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/sanstyle-starter");
+    script.setAttribute("repo", "xinetzone/haxe-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -94,12 +94,12 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/sanstyle-starter/docs/start/build-ai.html" />
+    <link rel="canonical" href="https://xinetzone.github.io/haxe-book/docs/start/types-function.html" />
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="指南" href="../basics/index.html" />
-    <link rel="prev" title="快速上手" href="index.html" />
+    <link rel="next" title="关于" href="../about/index.html" />
+    <link rel="prev" title="target-details" href="target-details.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -139,12 +139,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../README.html">
-   Sanstyle Strater
+   Haxe 教程
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   快速上手
+   教程
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -152,74 +152,84 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="00_intro.html">
+     Haxe 概述
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_language-features.html">
+     Haxe 语言特性
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_stdlib-intro.html">
+     Haxe 标准库简介
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_compiler-targets.html">
+     编译器的目标
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_types.html">
+     类型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11_type-system.html">
+     类型系统
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class-field.html">
+     Class Fields
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-features.html">
+     compiler-features
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compiler-usage.html">
+     compiler-usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="expression.html">
+     expression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="haxelib.html">
+     haxelib
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="macro.html">
+     macro
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python.html">
+     Python &amp; Haxe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="std.html">
+     Standard Library
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="target-details.html">
+     target-details
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     从零开始搭建 AI 环境
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../basics/index.html">
-   指南
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../basics/topic.html">
-     基础
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  主题
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../topics/index.html">
-   主题1
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../topics/topic.html">
-     某个主题
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  原理
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../principle/index.html">
-   解释
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../principle/topic.html">
-     高级教程
+     types-function
     </a>
    </li>
   </ul>
@@ -235,8 +245,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -257,23 +267,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference external" href="https://xinetzone.github.io/sanstyle-book/">
    Sanstyle Book
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../other/index.html">
-   外部资源
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../other/topic.html">
-     话题
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -339,7 +332,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/docs/start/build-ai.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/docs/start/types-function.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -355,11 +348,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/sanstyle-starter"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/xinetzone/haxe-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/sanstyle-starter/issues/new?title=Issue%20on%20page%20%2Fdocs/start/build-ai.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/haxe-book/issues/new?title=Issue%20on%20page%20%2Fdocs/start/types-function.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -380,28 +373,6 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jupyter-notebook">
-   安装
-   <span class="xref std std-term">
-    Jupyter
-   </span>
-   Notebook 扩展
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mamba">
-   Mamba
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -410,70 +381,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="ai">
-<h1>从零开始搭建 AI 环境<a class="headerlink" href="#ai" title="永久链接至标题">¶</a></h1>
-<dl class="describe">
-<dt class="sig sig-object">
-<span class="sig-name descname"><span class="pre">软件设置</span></span></dt>
-<dd><ol class="simple">
-<li><p><a class="reference external" href="https://www.anaconda.com/products/individual#Downloads">下载并安装 Anaconda</a> 开发和管理 <a class="reference external" href="https://www.python.org/">Python</a> 环境。</p></li>
-<li><p><a class="reference external" href="https://code.visualstudio.com/">下载并安装 Visual Studio Code</a> 作为编辑器，并添加 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python 插件</a> 以支持 Python，添加 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a> 以及 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight">MyST-Markdown</a> 以提供 Markdown 的高级支持。</p></li>
-<li><p><a class="reference external" href="https://git-scm.com/downloads">下载并安装 Git</a> 作为项目管理工具。最好选择 <a class="reference external" href="https://xinetzone.github.io/wiki/glossary/soft.html#term-Visual-Studio-Code" title="(在 Python)"><span class="xref std std-term">Visual Studio Code</span></a> 作为 Git 的编辑器。可以使用 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a> 可视化 Git 管理。</p></li>
-<li><p>（可选）在 Windows 系统安装 <a class="reference external" href="https://xinetzone.github.io/wiki/glossary/soft.html#term-MobaXterm" title="(在 Python)"><span class="xref std std-term">MobaXterm</span></a> 以远程操作 Ubuntu 服务器。</p></li>
-</ol>
-</dd></dl>
-
-<dl class="describe">
-<dt class="sig sig-object">
-<span class="sig-name descname"><span class="pre">Git</span> <span class="pre">配置</span></span></dt>
-<dd><p>为了正常使用 Git，需要初始化：</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
-git config --global user.email <span class="s2">&quot;email@example.com&quot;</span>
-</pre></div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
-<p>解决 <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>: Permission denied (publickey) 问题</p>
-<ul class="simple">
-<li><p>客户端生成 ssh key</p></li>
-</ul>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t rsa -C <span class="s2">&quot;youremail@example.com&quot;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>把生成的 <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> 里面的内容复制到你的 github 账号，在 <code class="docutils literal notranslate"><span class="pre">settings</span></code> –&gt;<code class="docutils literal notranslate"> <span class="pre">SSH</span> <span class="pre">and</span> <span class="pre">GPG</span> <span class="pre">keys</span></code> 下 <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">SSH</span> <span class="pre">key</span></code>，然后将 <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> 里的内容复制到 <code class="docutils literal notranslate"><span class="pre">Key</span></code> 中，完成后 <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">SSH</span> <span class="pre">Key</span></code>。</p></li>
-</ul>
-</div>
-</dd></dl>
-
-<section id="jupyter-notebook">
-<h2>安装 <a class="reference external" href="https://xinetzone.github.io/wiki/glossary/jupyter.html#term-Jupyter" title="(在 Python)"><span class="xref std std-term">Jupyter</span></a> Notebook 扩展<a class="headerlink" href="#jupyter-notebook" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">ipython-contrib/jupyter_contrib_nbextensions</a> 这个存储库包含了一个扩展集合，可以为 Jupyter 笔记本添加功能。这些扩展大多是用 <a class="reference external" href="https://xinetzone.github.io/wiki/glossary/javascript.html#term-JavaScript" title="(在 Python)"><span class="xref std std-term">JavaScript</span></a> 编写的，将在浏览器中本地加载。</p>
-<p>IPython-contrib 存储库由一组用户和开发人员独立维护，与 IPython 开发团队没有正式关系。</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install jupyter_contrib_nbextensions
-jupyter contrib nbextension install --user
-jupyter nbextensions_configurator <span class="nb">enable</span> --user
-pip install autopep8 --user
-</pre></div>
-</div>
-</section>
-<section id="mamba">
-<h2>Mamba<a class="headerlink" href="#mamba" title="永久链接至标题">¶</a></h2>
-<p>Conda 作为使用最为广泛的数据科学环境管理工具，可以协助我们很方便的完成创建管理环境、下载安装第三方库、软件包等操作，但其在下载资源的过程中下载速度时常令人捉急，即使使用连接速度更快的国内镜像，也摆脱不了其单线程挨个下载资源导致的低效问题。</p>
-<p>而 Mamba（黑曼巴）专为加速Conda而生，其改写了 Conda 下载资源的固有方式，以多线程的方式对网络资源进行并行下载，从而大幅提升 Conda 效率。</p>
-<p>首先我们需要安装 Mamba，既然是用来加速 Conda，那么我们可以直接使用下列命令来安装 Mamba：</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge mamba
-</pre></div>
-</div>
-<p>安装完成之后，当你运行 <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">-V</span></code> 查看其版本时会发现返回的是 Conda 的版本信息，这是因为 Mamba 的本质是对 Conda 功能的覆盖，因此我们在使用 Mamba 时其实只要将原有的 Conda 语句中的 conda 替换为 mamba 即可，譬如我们常用的 <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">clean</span> <span class="pre">--all</span></code>，即清空本地缓存安装包。</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="types-function">
+<span id="haxe-types-function"></span><h1>types-function<a class="headerlink" href="#types-function" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://haxe.org/manual/types-function.html">https://haxe.org/manual/types-function.html</a></p>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/sanstyle-starter",
+            repo: "xinetzone/haxe-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -499,19 +416,19 @@ pip install autopep8 --user
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="index.html" title="上一页 页">
+        <a class="left-prev" href="target-details.html" title="上一页 页">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">上一页</p>
-                <p class="prevnext-title">快速上手</p>
+                <p class="prevnext-title">target-details</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../basics/index.html" title="下一页 页">
+        <a class="right-next" href="../about/index.html" title="下一页 页">
             <div class="prevnext-info">
                 <p class="prevnext-label">下一页</p>
-                <p class="prevnext-title">指南</p>
+                <p class="prevnext-title">关于</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
